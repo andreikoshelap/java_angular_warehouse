@@ -1,4 +1,6 @@
 spring:
+  environment:
+    - SERVER_PORT=8081
   datasource:
     url: jdbc:postgresql://localhost:5432/client
     username: postgres
