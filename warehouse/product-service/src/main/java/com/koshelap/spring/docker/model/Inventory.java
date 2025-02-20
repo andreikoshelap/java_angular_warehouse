@@ -1,4 +1,4 @@
-package ru.otus.spring.docker.model;
+package com.koshelap.spring.docker.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

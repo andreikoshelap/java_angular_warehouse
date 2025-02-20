@@ -1,12 +1,12 @@
-package ru.otus.spring.docker.rest;
+package com.koshelap.spring.docker.rest;
 
 
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.otus.spring.docker.model.Inventory;
-import ru.otus.spring.docker.repository.InventoryRepository;
+import com.koshelap.spring.docker.model.Inventory;
+import com.koshelap.spring.docker.repository.InventoryRepository;
 
 import java.util.List;
 
