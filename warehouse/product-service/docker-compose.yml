@@ -1,5 +1,5 @@
 services:
-  product-app:
+  app:
     build:
       context: .
       dockerfile: product.dockerfile
