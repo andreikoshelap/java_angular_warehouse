@@ -1,11 +1,11 @@
 package com.koshelap.spring.docker.repository;
 
 
+import com.koshelap.spring.docker.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.koshelap.spring.docker.model.Inventory;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InventoryRepository extends JpaRepository<Inventory, Integer> {
+public interface ItemRepository extends JpaRepository<Item, Integer> {
 
 }
