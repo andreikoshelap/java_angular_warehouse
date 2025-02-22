@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -21,5 +21,9 @@ public class Order {
     private int clientId;
 
     private String status;
+    private float totalPrice;
+    @Column(name = "created_at")
+    private LocalDate createdAt;
+
 
 }

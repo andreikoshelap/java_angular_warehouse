@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2025-02-22--create-items-table--kohelap
+      author: kohelap
+      changes:
+        - createTable:
+            tableName: items
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_item
+              - column:
+                  name: product_id
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: quantity
+                  type: integer
+              - column:
+                  name: unit_price
+                  type: decimal(10,2)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: order_id
+                  type: integer
+                  constraints:
+                    nullable: false
+
+        # Foreign Key for product_id -> inventory.id
+        - addForeignKeyConstraint:
+            baseTableName: items  # FIXED (was "item", should be "items")
+            baseColumnNames: product_id
+            constraintName: fk_items_inventory
+            referencedTableName: inventory
+            referencedColumnNames: id
+            onDelete: CASCADE
+            onUpdate: CASCADE
+
+        # Foreign Key for order_id -> orders.id
+        - addForeignKeyConstraint:
+            baseTableName: items  # FIXED (was "item", should be "items")
+            baseColumnNames: order_id
+            constraintName: fk_items_orders
+            referencedTableName: orders
+            referencedColumnNames: id
+            onDelete: CASCADE
+            onUpdate: CASCADE

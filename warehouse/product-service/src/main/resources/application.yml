@@ -3,7 +3,12 @@ spring:
     url: jdbc:postgresql://localhost:5432/db
     username: postgres
     password: postgres
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
   jpa:
     generate-ddl: true
-    hibernate:
-      ddl-auto: create-drop
+logging:
+  level:
+    liquibase: DEBUG
+
+

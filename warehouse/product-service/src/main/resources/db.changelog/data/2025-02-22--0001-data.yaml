@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2025-02-22--0001-inventory
+      author: koshelap
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: classpath:/db/changelog/data/data/2025-02-22--0001-inventory.csv
+        relativeToChangelogFile: true
+        separator: ";"
+        quotChar: '"'
+        encoding: UTF-8
+        tableName: inventory
+  - changeSet:
+      id: 2025-02-22--0001-orders
+      author: koshelap
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: classpath:/db/changelog/data/data/2025-02-22--0001-orders.csv
+        relativeToChangelogFile: true
+        separator: ";"
+        quotChar: '"'
+        encoding: UTF-8
+        tableName: orders
+  - changeSet:
+      id: 2025-02-22--0001-items
+      author: koshelap
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: id
+        file: classpath:/db/changelog/data/data/2025-02-22--0001-items.csv
+        relativeToChangelogFile: true
+        separator: ";"
+        quotChar: '"'
+        encoding: UTF-8
+        tableName: items

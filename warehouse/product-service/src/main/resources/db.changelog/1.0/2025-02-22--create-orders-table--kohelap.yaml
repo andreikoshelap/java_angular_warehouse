@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2025-02-22--create-orders-table--kohelap
+      author: kohelap
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_order
+              - column:
+                  name: client_id
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(25)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_price
+                  type: decimal(10,2)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+                    defaultValueComputed: CURRENT_TIMESTAMP
+
+#        # Add foreign key constraint for client_id (assuming it references clients table)
+#        - addForeignKeyConstraint:
+#            baseTableName: orders
+#            baseColumnNames: client_id
+#            constraintName: fk_orders_client
+#            referencedTableName: clients  # Ensure this table exists!
+#            referencedColumnNames: id
+#            onDelete: CASCADE
+#            onUpdate: CASCADE
