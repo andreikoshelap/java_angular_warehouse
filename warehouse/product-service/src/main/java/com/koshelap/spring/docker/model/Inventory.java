@@ -22,8 +22,9 @@ public class Inventory {
     private float price;
     private int stock;
     private String category;
-    @Column(name = "created_at")
     private LocalDate createdAt;
+    private LocalDate updatedAt;
+
 
 
 
@@ -47,6 +48,5 @@ public class Inventory {
     public Inventory(String name, int stock, LocalDate createdAt) {
         this.name = name;
         this.stock = stock;
-        this.createdAt = createdAt;
     }
 }

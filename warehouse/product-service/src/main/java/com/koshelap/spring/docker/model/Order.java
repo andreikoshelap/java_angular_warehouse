@@ -24,6 +24,7 @@ public class Order {
     private float totalPrice;
     @Column(name = "created_at")
     private LocalDate createdAt;
+    private LocalDate updatedAt;
 
 
 }

@@ -3,8 +3,11 @@ databaseChangeLog:
       id: 2025-02-22--create-items-table--kohelap
       author: kohelap
       changes:
-        - createTable:
+        - loadData:
+            file: src/main/resources/db/changelog/data/items.csv
             tableName: items
+            separator: ";"
+            encoding: UTF-8
             columns:
               - column:
                   name: id
@@ -24,7 +27,7 @@ databaseChangeLog:
                   type: integer
               - column:
                   name: unit_price
-                  type: decimal(10,2)
+                  type: decimal
                   constraints:
                     nullable: true
               - column:
@@ -35,7 +38,7 @@ databaseChangeLog:
 
         # Foreign Key for product_id -> inventory.id
         - addForeignKeyConstraint:
-            baseTableName: items  # FIXED (was "item", should be "items")
+            baseTableName: items
             baseColumnNames: product_id
             constraintName: fk_items_inventory
             referencedTableName: inventory
@@ -45,7 +48,7 @@ databaseChangeLog:
 
         # Foreign Key for order_id -> orders.id
         - addForeignKeyConstraint:
-            baseTableName: items  # FIXED (was "item", should be "items")
+            baseTableName: items
             baseColumnNames: order_id
             constraintName: fk_items_orders
             referencedTableName: orders

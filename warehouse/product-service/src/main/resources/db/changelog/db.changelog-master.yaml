@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - include:
+      file: src/main/resources/db/changelog/data/2025-02-22--inventory.yaml
+  - include:
+      file: src/main/resources/db/changelog/data/2025-02-22--orders.yaml
+  - include:
+      file: src/main/resources/db/changelog/data/2025-02-22--items.yaml
+

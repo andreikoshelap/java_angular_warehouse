@@ -3,8 +3,11 @@ databaseChangeLog:
       id: 2025-02-22--create-orders-table--kohelap
       author: kohelap
       changes:
-        - createTable:
+        - loadData:
+            file: src/main/resources/db/changelog/data/orders.csv
             tableName: orders
+            separator: ";"
+            encoding: UTF-8
             columns:
               - column:
                   name: id

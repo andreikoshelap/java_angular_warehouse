@@ -1,10 +1,13 @@
 databaseChangeLog:
   - changeSet:
-      id: 2025-02-22--create-inventory-table--kohelap
-      author: kohelap
+      id: 2025-02-22--create-inventory-table--koshelap
+      author: koshelap
       changes:
-        - createTable:
+        - loadData:
+            file: src/main/resources/db/changelog/data/inventory.csv
             tableName: inventory
+            separator: ";"
+            encoding: UTF-8
             columns:
               - column:
                   name: id
@@ -16,32 +19,27 @@ databaseChangeLog:
                     primaryKeyName: pk_inventory
               - column:
                   name: name
-                  type: varchar(25)
+                  type: string
                   constraints:
                     nullable: false  # Ensures name is always provided
               - column:
                   name: description
-                  type: varchar(256)
+                  type: string
                   constraints:
                     nullable: true
               - column:
                   name: price
-                  type: decimal(10,2)  # For PostgreSQL, consider using numeric(10,2)
+                  type: int  # For PostgreSQL, consider using numeric(10,2)
                   constraints:
                     nullable: false  # Usually, price should not be NULL
               - column:
                   name: stock
-                  type: integer
+                  type: int
                   constraints:
                     nullable: false  # Stock should not be NULL
               - column:
                   name: category
-                  type: varchar(25)
+                  type: string
                   constraints:
                     nullable: false  # Categories should be defined
-              - column:
-                  name: created_at
-                  type: timestamp
-                  constraints:
-                    nullable: false
-                    defaultValueComputed: CURRENT_TIMESTAMP
+

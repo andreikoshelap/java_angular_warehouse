@@ -3,12 +3,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/db
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
   liquibase:
     change-log: classpath:/db/changelog/db.changelog-master.yaml
   jpa:
     generate-ddl: true
-logging:
-  level:
-    liquibase: DEBUG
 
 
