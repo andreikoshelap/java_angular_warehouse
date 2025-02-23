@@ -16,7 +16,7 @@ public class Inventory {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Integer id;
+    private Long id;
     private String name;
     private String description;
     private float price;
@@ -28,7 +28,7 @@ public class Inventory {
 
 
 
-    public Inventory(Integer id) {
+    public Inventory(Long id) {
         this.id = id;
     }
 

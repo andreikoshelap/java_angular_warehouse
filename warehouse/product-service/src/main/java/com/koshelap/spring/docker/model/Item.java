@@ -15,7 +15,7 @@ public class Item {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Integer id;
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Inventory product;

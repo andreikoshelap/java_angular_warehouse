@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,15 +17,15 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    private int clientId;
-
+    private Long clientId;
     private String status;
     private float totalPrice;
-    @Column(name = "created_at")
     private LocalDate createdAt;
     private LocalDate updatedAt;
+
+
 
 
 }

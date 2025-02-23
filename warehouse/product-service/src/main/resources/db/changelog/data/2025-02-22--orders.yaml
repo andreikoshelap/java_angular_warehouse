@@ -11,7 +11,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: bigint
                   autoIncrement: true
                   constraints:
                     nullable: false
@@ -19,7 +19,7 @@ databaseChangeLog:
                     primaryKeyName: pk_order
               - column:
                   name: client_id
-                  type: integer
+                  type: bigint
                   constraints:
                     nullable: false
               - column:

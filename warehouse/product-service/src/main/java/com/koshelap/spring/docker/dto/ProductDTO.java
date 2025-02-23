@@ -1,6 +1,5 @@
 package com.koshelap.spring.docker.dto;
 
-import com.koshelap.spring.docker.model.Order;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -10,14 +9,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class OrderDTO {
+public class ProductDTO {
 
     private Long id;
-    private Long clientId;
-    private String status;
-    private float totalPrice;
+    private String name;
+    private String description;
+    private float price;
+    private int stock;
+    private String category;
     private LocalDate createdAt;
-
-    public OrderDTO(Order savedOrder) {
-    }
+    private LocalDate updatedAt;
 }

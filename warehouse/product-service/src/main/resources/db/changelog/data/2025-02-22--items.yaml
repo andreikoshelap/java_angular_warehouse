@@ -11,7 +11,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: bigint
                   autoIncrement: true
                   constraints:
                     nullable: false
@@ -19,7 +19,7 @@ databaseChangeLog:
                     primaryKeyName: pk_item
               - column:
                   name: product_id
-                  type: integer
+                  type: bigint
                   constraints:
                     nullable: false
               - column:
@@ -32,7 +32,7 @@ databaseChangeLog:
                     nullable: true
               - column:
                   name: order_id
-                  type: integer
+                  type: bigint
                   constraints:
                     nullable: false
 

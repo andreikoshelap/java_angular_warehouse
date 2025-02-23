@@ -6,6 +6,6 @@ import com.koshelap.spring.docker.model.Inventory;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InventoryRepository extends JpaRepository<Inventory, Integer> {
+public interface InventoryRepository extends JpaRepository<Inventory, Long> {
 
 }
