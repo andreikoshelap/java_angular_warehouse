@@ -14,9 +14,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Client {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Integer id;
+    private Long id;
     private String email;
     @Column(name = "first_name")
     private String firstName;
@@ -27,7 +27,7 @@ public class Client {
 
 
 
-    public Client(Integer id) {
+    public Client(Long id) {
         this.id = id;
     }
 

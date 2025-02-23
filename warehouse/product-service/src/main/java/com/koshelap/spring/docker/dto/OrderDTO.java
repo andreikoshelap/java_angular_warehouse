@@ -1,9 +1,9 @@
 package com.koshelap.spring.docker.dto;
 
-import com.koshelap.spring.docker.model.Order;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -16,8 +16,7 @@ public class OrderDTO {
     private Long clientId;
     private String status;
     private float totalPrice;
-    private LocalDate createdAt;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime createdAt = LocalDateTime.now();
 
-    public OrderDTO(Order savedOrder) {
-    }
 }

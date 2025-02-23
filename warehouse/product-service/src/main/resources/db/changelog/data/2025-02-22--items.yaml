@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 2025-02-22--create-items-table--kohelap
-      author: kohelap
+      id: 2025-02-22--create-items-table--koshelap
+      author: koshelap
       changes:
         - loadData:
             file: src/main/resources/db/changelog/data/items.csv

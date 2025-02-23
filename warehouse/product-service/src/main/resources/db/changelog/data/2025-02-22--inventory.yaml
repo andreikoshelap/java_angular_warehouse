@@ -21,7 +21,7 @@ databaseChangeLog:
                   name: name
                   type: string
                   constraints:
-                    nullable: false  # Ensures name is always provided
+                    nullable: false
               - column:
                   name: description
                   type: string
@@ -29,17 +29,17 @@ databaseChangeLog:
                     nullable: true
               - column:
                   name: price
-                  type: int  # For PostgreSQL, consider using numeric(10,2)
+                  type: numeric(10,2)
                   constraints:
-                    nullable: false  # Usually, price should not be NULL
+                    nullable: false
               - column:
                   name: stock
                   type: int
                   constraints:
-                    nullable: false  # Stock should not be NULL
+                    nullable: false
               - column:
                   name: category
                   type: string
                   constraints:
-                    nullable: false  # Categories should be defined
+                    nullable: false
 

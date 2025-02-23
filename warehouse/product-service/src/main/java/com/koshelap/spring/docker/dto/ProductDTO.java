@@ -1,8 +1,10 @@
 package com.koshelap.spring.docker.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -17,6 +19,8 @@ public class ProductDTO {
     private float price;
     private int stock;
     private String category;
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime createdAt = LocalDateTime.now();
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime updatedAt;
 }
