@@ -53,17 +53,17 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: credentialsNonExpired
+                  name: credentials_non_expired
                   type: boolean
                   constraints:
                     nullable: false
               - column:
-                  name: accountNonLocked
+                  name: account_non_locked
                   type: boolean
                   constraints:
                     nullable: false
               - column:
-                  name: accountNonExpired
+                  name: account_non_expired
                   type: boolean
                   constraints:
                     nullable: false

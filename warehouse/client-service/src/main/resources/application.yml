@@ -1,6 +1,10 @@
 server:
   port: 8081
 spring:
+  security:
+    user:
+      name: admin
+      password: admin123
   environment:
     - SERVER_PORT=8081
   datasource:

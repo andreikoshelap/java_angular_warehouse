@@ -2,6 +2,7 @@ package com.koshelap.spring.docker.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,6 +17,7 @@ import java.util.Collection;
 @Data
 @Entity
 @Table(name = "client")
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Client implements UserDetails {

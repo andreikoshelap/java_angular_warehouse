@@ -6,4 +6,7 @@ import com.koshelap.spring.docker.model.Client;
 
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
+    Client findByUsername(String username);
+
+    boolean existsByUsername(String username);
 }
