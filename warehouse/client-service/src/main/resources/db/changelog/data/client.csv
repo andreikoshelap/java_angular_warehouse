@@ -1,0 +1,6 @@
+email;username;password;first_name;last_name;role;enabled;credentialsNonExpired;accountNonLocked;accountNonExpired
+andrei@dva.ee;andrei@dva.ee;1312312;Andrei;Koshelap;USER;1;1;1;1
+sebastien@kuehne-nagel.com;sebastien@kuehne-nagel.com;333333;Sebastien;Col;USER;1;1;1;1
+admin@store.ee;admin@store.ee;25425;Elpidiphor;Piskarev;ADMIN;1;1;1;1
+
+

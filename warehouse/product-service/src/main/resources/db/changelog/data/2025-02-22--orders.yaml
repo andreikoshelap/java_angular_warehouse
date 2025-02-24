@@ -38,6 +38,12 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     defaultValueComputed: CURRENT_TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+                    defaultValueComputed: CURRENT_TIMESTAMP
 
 #        # Add foreign key constraint for client_id (assuming it references clients table)
 #        - addForeignKeyConstraint:

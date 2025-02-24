@@ -1,11 +1,11 @@
 databaseChangeLog:
   - changeSet:
-      id: 2025-02-22--create-inventory-table--koshelap
+      id: 2025-02-24--create-client-table--koshelap
       author: koshelap
       changes:
         - loadData:
-            file: src/main/resources/db/changelog/data/inventory.csv
-            tableName: inventory
+            file: classpath:/db/changelog/data/client.csv
+            tableName: client
             separator: ";"
             encoding: UTF-8
             columns:
@@ -16,30 +16,55 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: pk_inventory
+                    primaryKeyName: pk_client
               - column:
-                  name: name
+                  name: email
                   type: string
                   constraints:
                     nullable: false
               - column:
-                  name: description
+                  name: username
+                  type: string
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: string
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
                   type: string
                   constraints:
                     nullable: true
               - column:
-                  name: price
-                  type: numeric(10,2)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: stock
-                  type: int
-                  constraints:
-                    nullable: false
-              - column:
-                  name: category
+                  name: last_name
                   type: string
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: string
+                  constraints:
+                    nullable: false
+              - column:
+                  name: enabled
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: credentialsNonExpired
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: accountNonLocked
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: accountNonExpired
+                  type: boolean
                   constraints:
                     nullable: false
               - column:
