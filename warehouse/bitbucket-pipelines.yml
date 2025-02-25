@@ -20,12 +20,12 @@ pipelines:
           - docker
         script:
           - echo "Starting containers..."
-          - docker-compose up -d  
-          - sleep 20  
-          - docker ps  
+          - docker-compose up -d
+          - sleep 20
+          - docker ps
           - echo "Testing services..."
           - curl -f http://localhost:8080/api/products || exit 1  # check both containers
-          - curl -f http://localhost:8081/api/clients || exit 1   
+          - curl -f http://localhost:8081/api/clients || exit 1
           - echo "Tests passed!"
 
     - step:
