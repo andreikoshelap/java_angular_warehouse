@@ -1,5 +1,5 @@
 databaseChangeLog:
   - include:
-      file: classpath:/db/changelog/data/2025-02-24--client.yaml
+      file: src/main/resources/db/changelog/data/2025-02-24--client.yaml
 
 

@@ -4,7 +4,7 @@ databaseChangeLog:
       author: koshelap
       changes:
         - loadData:
-            file: classpath:/db/changelog/data/client.csv
+            file: src/main/resources/db/changelog/data/client.csv
             tableName: client
             separator: ";"
             encoding: UTF-8
