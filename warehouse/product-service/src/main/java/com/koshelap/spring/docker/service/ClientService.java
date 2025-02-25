@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class ClientService {
 
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String CLIENT_SERVICE_URL = "http://client-service:8081/api/clients/";
+    private final String CLIENT_SERVICE_URL = "http://client-app:8081/api/clients/";
 
     public ClientDTO getClientById(Long clientId) {
         String url = CLIENT_SERVICE_URL + clientId;
